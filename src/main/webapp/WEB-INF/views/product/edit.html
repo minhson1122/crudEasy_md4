@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/products/add" method="post">
+    <input type="text" name="id" th:value="${item.getId()}">
+    <input type="text" name="tittle" th:value="${item.getTittle()}">
+    <input type="text" name="content" th:value="${item.getContent()}">
+    <button>Save</button>
+</form>
+</body>
+</html>

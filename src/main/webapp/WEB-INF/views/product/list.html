@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chủ đề được quan tâm trong tuần</h1>
+<div  th:each="item : ${list}" >
+    <span th:text="${item.getContent()}"></span>
+    <span th:text="${item.getTittle()}"></span>
+    <a th:href="@{/products/edit/__${item.id}__}">Edit</a>
+    <a th:href="@{/products/delete/__${item.id}__}">Delete</a>
+
+</div>
+</body>
+</html>
